@@ -34,7 +34,7 @@ var oauth = {
             method: 'POST',
             dataType: 'text',
             data: {
-                scope: scope, //','+sap.sentinel.data_view,
+                scope: scope,
                 client_id: clientId,
                 client_secret: clientSecretId,
                 grant_type: 'client_credentials'
@@ -44,9 +44,8 @@ var oauth = {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
             complete: function (xhr, data) {
-                console.warn(xhr, data);
+                console.warn(data);
                 //called when complete
-                console.log("call to fetch prices for pagination succeeded");
             }
         });
         return deferred.promise();
